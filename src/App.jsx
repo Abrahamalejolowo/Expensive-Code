@@ -23,13 +23,6 @@ import David from "./assets/David Sax.png";
 
 
 
-/***************************
-  Abraham's Portfolio
-  - Dark/Light mode toggle (persisted)
-  - Framer Motion animations
-  - Responsive UI with Tailwind
-***************************/
-
 /******** Theme Hook ********/
 function useTheme() {
   const [theme, setTheme] = useState("light");
