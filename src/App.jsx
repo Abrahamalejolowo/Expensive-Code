@@ -16,6 +16,12 @@ import {
   X,
 } from "lucide-react";
 import "./App.css";
+import listify from "./assets/listify .png";
+import Misa from "./assets/Misa.png";
+import NFT from "./assets/NFT.png";
+import David from "./assets/David Sax.png";
+
+
 
 /***************************
   Abraham's Portfolio
@@ -109,57 +115,39 @@ const SKILLS = [
 const PROJECTS = [
   {
     name: "Listify — To-Do List App",
-    img: "src/assets/listify .png",
+    img: listify, 
     description:
       "A feature-rich task manager with intuitive UX, syncing, reminders, and secure auth.",
-    highlights: [
-      "Clean, responsive UI",
-      "Local + cloud syncing",
-      "Task prioritization & reminders",
-      "Firebase auth (JWT)",
-    ],
     tech: ["React", "Tailwind CSS", "Firebase", "Vercel"],
     live: "https://listify-gilt.vercel.app",
     repo: "https://github.com/Abrahamalejolowot",
   },
   {
     name: "MASA Web Application (E-commerce)",
-    img: "src/assets/Misa.png",
+    img: Misa,
     description:
       "Online store for skincare & perfume — product catalog, search, filters, payments.",
-    highlights: [
-      "API integration",
-      "Add-to-cart",
-      "Search & filtering",
-      "Performance",
-    ],
     tech: ["React", "TypeScript", "REST APIs"],
     repo: "https://github.com/TusharDontulwarSaiesha/Misa",
   },
   {
     name: "NFT Marketplace (Web3)",
-    img: "src/assets/NFT.png",
+    img: NFT,
     description:
       "Secure marketplace for minting and trading NFTs with wallet-based auth.",
-    highlights: ["Smart contracts", "ETH & Polygon", "Lazy minting"],
     tech: ["React", "Web3.js", "MetaMask", "Firebase"],
     repo: "https://github.com/Abrahamalejolowo/react-project",
   },
   {
     name: "David Sax Website",
-    img: "src/assets/David Sax.png",
+    img: David,
     description:
       "Personal portfolio website for David Sax, featuring responsive layouts, accessibility, and SEO best practices.",
-    highlights: [
-      "Responsive UI",
-      "SEO optimization",
-      "Accessibility",
-      "Cross-browser support",
-    ],
     tech: ["React", "Tailwind CSS"],
     repo: "https://github.com/Abrahamalejolowo/Davidsax-",
   },
 ];
+
 
 const VALUES = [
   {
@@ -527,8 +515,8 @@ export default function Portfolio() {
               {/* Project Image */}
               {p.img && (
                 <img
-                  src={p.img}
-                  alt={p.name}
+                   src={p.img}   
+                   alt={p.name}
                   className="rounded-xl w-full h-40 object-cover mb-3 border border-gray-200 dark:border-gray-700"
                 />
               )}
