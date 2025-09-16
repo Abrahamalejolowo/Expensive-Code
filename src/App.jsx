@@ -112,7 +112,7 @@ const PROJECTS = [
     description:
       "A feature-rich task manager with intuitive UX, syncing, reminders, and secure auth.",
     tech: ["React", "Tailwind CSS", "Firebase", "Vercel"],
-    live: "https://listify-gilt.vercel.app",
+    live: "https://listify-gilt.vercel.app/",
     repo: "https://github.com/Abrahamalejolowot",
   },
   {
@@ -231,7 +231,6 @@ const EXPERIENCE = [
   {
     role: "Web Developer Intern",
     org: "Aristiec, India",
-    period: "April 2025 – July 2025",
     bullets: [
       "Implemented product catalog (search, filter, add‑to‑cart)",
       "Integrated REST APIs for auth, product & payments",
@@ -239,6 +238,17 @@ const EXPERIENCE = [
       "Supported testing, debugging, and stability improvements",
     ],
   },
+    {
+    role: "Frontend Developer",
+    org: "NAICTS, Student Representative Council (SRC), KWASU",
+    bullets: [
+      "Engaged in legislative leadership training and workshops",
+      "Developed awareness in leadership, governance, and civic engagement",
+      "Collaborated with peers to enhance decision-making and teamwork skills",
+      "Recognized for commitment to leadership and community development",
+    ],
+  },
+  
 ];
 /******** Portfolio Component ********/
 export default function Portfolio() {
@@ -285,7 +295,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen font-[hacker] animated-bg text-gray-900 dark:text-gray-100">
+    <div  className="min-h-screen font-[hacker]  animated-bg text-gray-900 dark:bg-[#2b2b2b] dark:text-gray-100">
       {/* NAVBAR */}
       <header className="sticky top-0 z-30 backdrop-blur bg-white/70 dark:bg-gray-950/60 border-b border-gray-200/60 dark:border-gray-800">
         <div className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
@@ -356,7 +366,7 @@ export default function Portfolio() {
         )}
       </header>
 
-      <section id="home" className="pt-16 md:pt-24">
+      <section  className="pt-7 md:pt-24">
         <motion.div
           className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-8 items-center"
           initial="hidden"
@@ -365,13 +375,13 @@ export default function Portfolio() {
         >
           <motion.div variants={fadeUp}>
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs md:text-sm mb-4">
-              <span className="inline-block w-2 h-2 rounded-full bg-emerald-500" />
+              <span id="point" className="inline-block w-2 h-2 rounded-full bg-[red]" />
               <span>Open to jr software dev role Full stack Dev role</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
               {PROFILE.name}
             </h1>
-            <p className="mt-3 text-lg md:text-xl text-gray-600 dark:text-gray-300">
+            <p id="h2" className="mt-3 text-lg md:text-xl text-gray-600">
               {PROFILE.title} — {PROFILE.tagline}
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -387,7 +397,7 @@ export default function Portfolio() {
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-300">
-              <div className="inline-flex items-center gap-2">
+              <div className="inline-flex items-center gap-2" id="h2">
                 <Phone className="w-4 h-4" /> {PROFILE.phone}
               </div>
               <div className="inline-flex items-center gap-2">
@@ -414,23 +424,24 @@ export default function Portfolio() {
 
           <motion.div
             variants={scaleIn}
-            className="relative rounded-3xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-gray-900/60 p-8 shadow-sm"
+            id="home"
+            className="relative  rounded-3xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-[red] p-8 shadow-sm"
           >
-            <div className="grid grid-cols-2 gap-4">
+            <div id="home" className="grid grid-cols-2 gap-4">
               {SKILLS.slice(0, 4).map((group) => (
-                <div key={group.group}>
-                  <p className="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">
+                <div key={group.group} id="home">
+                  <p id="home" className="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">
                     {group.group}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div id="home" className="flex flex-wrap gap-2">
                     {group.items.slice(0, 6).map((s) => (
-                      <Chip key={s}>{s}</Chip>
+                      <Chip id="home" key={s}>{s}</Chip>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-xs text-gray-500 dark:text-gray-400">
+            <p id="home" className="mt-6 text-xs text-gray-500 dark:text-gray-400">
               Security‑minded: JWT • bcrypt • Perf & accessibility focused
             </p>
           </motion.div>
@@ -441,7 +452,7 @@ export default function Portfolio() {
         title="About Me"
         subtitle="I’m Abraham Samuel Alejolowo, an outcome-focused developer with 2 years of experience designing, developing, and deploying high-quality web applications. I care deeply about clean UX, performance, and security."
       >
-        <div className="grid md:grid-cols-2 gap-6">
+        <div  className="grid md:grid-cols-2 gap-6">
           <Card>
             <p className="leading-relaxed text-gray-700 dark:text-gray-200">
               I build digital experiences that are fast, accessible and secure.
@@ -458,7 +469,7 @@ export default function Portfolio() {
             </div>
           </Card>
           <Card>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-200 list-disc pl-5">
+            <ul  className="space-y-2 text-gray-700 dark:bg-[#2b2b2b] list-disc pl-5">
               <li>Strong critical thinking and system design mindset</li>
               <li>
                 Comfortable across the stack (React/TypeScript → Node/Firebase)
@@ -669,6 +680,7 @@ export default function Portfolio() {
 
             <button
               type="submit"
+              id="button"
               className="inline-flex items-center gap-2 rounded-full bg-gray-900 text-white 
                        dark:bg-white dark:text-gray-900 px-5 py-2.5 text-sm font-medium 
                        hover:opacity-90"
