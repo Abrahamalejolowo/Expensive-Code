@@ -398,11 +398,9 @@ export default function Portfolio() {
 
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-300">
               <div className="inline-flex items-center gap-2" id="h2">
-                <Phone className="w-4 h-4" /> {PROFILE.phone}
+                <Mail className="w-4 h-4" /> {PROFILE.email}
               </div>
-              <div className="inline-flex items-center gap-2">
-                <MapPin className="w-4 h-4" /> {PROFILE.location}
-              </div>
+             
             </div>
 
             <div className="mt-8 flex gap-3">
@@ -425,7 +423,7 @@ export default function Portfolio() {
           <motion.div
             variants={scaleIn}
             id="home"
-            className="relative  rounded-3xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-[red] p-8 shadow-sm"
+            className="relative  rounded-3xl border border-gray-200 dark:border-gray-800 bg-white/60 p-8 shadow-sm"
           >
             <div id="home" className="grid grid-cols-2 gap-4">
               {SKILLS.slice(0, 4).map((group) => (
